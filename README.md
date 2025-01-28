@@ -24,6 +24,25 @@ This code is privded
   - `requests`
 - Metabase API access
 
+## Docker
+
+You can run this application without requiring a python environment using Docker.
+
+1. Build your docker image:
+
+```
+docker build . -t metabasemigratetable
+```
+
+2. Create a container from the image:
+
+```
+docker run -it metabasemigratetable
+```
+
+Optional: Run the docker container with `docker run -it -v $(pwd)/:/app metabasemigratetable` to mount the local repo into a container. This is useful if you are making
+changes to the application and don't want to rebuild the container on each change.
+
 ## Installation
 
 1. **Clone the Repository**
